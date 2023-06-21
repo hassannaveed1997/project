@@ -1,17 +1,20 @@
 import random
 
 # below is the game logic implemented as a function.
-def game():
+def game(seed = None):
+    if seed: # set a random seed if one is provided
+        random.seed(seed)
+        
     A = 4
     B = 4
     pot = 2
     players = ['A', 'B']
-    turn = 0 # the number of total turns (Note the number of cycles will be "turns//2 + 1")
+    turn = 0 # the current turn. A is 0 and B is 1
     cycle = 0 # the current cycle
 
     while True:  # The game will continue until a player cannot complete a task
         roll = random.randint(1, 6)
-        player = players[turn % 2]
+        player = players[turn]
         cycle += (turn == 0) #increment the cycle whenever player A goes
 
         # All possibilities for player A
@@ -25,7 +28,7 @@ def game():
                 coins_taken = pot // 2
                 A += coins_taken
                 pot -= coins_taken
-            else:
+            else: # rolls 4, 5, 6
                 if A == 0:  # Cannot complete the task
                     # print("Player B wins!")
                     return cycle, "B"
@@ -51,5 +54,6 @@ def game():
                     B -= 1
                     pot += 1
 
+        # update the turn
         turn += 1
         turn %= 2
