@@ -7,11 +7,13 @@ def game():
     pot = 2
     players = ['A', 'B']
     turn = 0 # the number of total turns (Note the number of cycles will be "turns//2 + 1")
+    cycle = 0 # the current cycle
 
     while True:  # The game will continue until a player cannot complete a task
         roll = random.randint(1, 6)
         player = players[turn % 2]
-        
+        cycle += (turn == 0) #increment the cycle whenever player A goes
+
         # All possibilities for player A
         if player == 'A':
             if roll == 1:
@@ -25,8 +27,8 @@ def game():
                 pot -= coins_taken
             else:
                 if A == 0:  # Cannot complete the task
-                    print("Player B wins!")
-                    return turn
+                    # print("Player B wins!")
+                    return cycle, "B"
                 else: # decement A's coins and increment the pot
                     A -= 1
                     pot += 1
@@ -43,12 +45,11 @@ def game():
                 pot -= coins_taken
             else:
                 if B == 0:  # Cannot complete the task
-                    print("Player A wins!")
-                    return turn
+                    # print("Player A wins!")
+                    return cycle, "A"
                 else: # decement B's coins and increment the pot
                     B -= 1
                     pot += 1
-        
-        turn += 1
 
-game()
+        turn += 1
+        turn %= 2
