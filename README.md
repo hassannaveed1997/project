@@ -17,8 +17,25 @@ The game is stored in `game.py` and "first-step" analysis is provided in the not
 2. markov_chain_game.py - Markov chain implementain to get to steady state probabilities.
 3. analysis.ipynb - Jupyter notebook has Monte Carlo and Markov Chain runs and tries to approximate the Monte Carlo runs.
 
+## Running the Code:
+### Setting up the enviornment
+The `environment.yaml` file contains the setup for the enivronment. It can be created using:
+```
+conda env create --file environment.yaml
+```
+You may need to install the fitter package, using `pip install fitter`.
+
+Ensure the all the files are in the same directory
+
+### Running
+Just run the notebook `analysis.ipynb`. It is divided into two sections.
+- Section 1: Uses the `game.py` file to run Monte Carlo simulations (**Note:** You can skip the subsection wiht 10,000,000 trials, since that will take a lot of time to run)
+- Section 2: Uses the `markov_chain_game.py` file to get the exact distribution in Section 2.
+
 
 ## Python packages and version
+
+For reference, here are the python packages and their versions used:
 Python              3.11.2
 fitter              1.5.2
 matplotlib          3.7.1
