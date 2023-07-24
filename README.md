@@ -16,3 +16,16 @@ The game is stored in `game.py` and "first-step" analysis is provided in the not
 1. game.py - game definition for Monte Carlo simulation
 2. markov_chain_game.py - Markov chain implementain to get to steady state probabilities.
 3. analysis.ipynb - Jupyter notebook has Monte Carlo and Markov Chain runs and tries to approximate the Monte Carlo runs.
+
+
+## Python packages and version
+Python              3.11.2
+fitter              1.5.2
+matplotlib          3.7.1
+matplotlib-inline   0.1.6
+pandas              1.5.3
+plotly              5.13.1
+scikit-learn        1.2.1
+scipy               1.10.1
+seaborn             0.12.2
+statsmodels         0.14.0
