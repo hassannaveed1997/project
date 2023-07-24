@@ -15,5 +15,4 @@ The game is stored in `game.py` and "first-step" analysis is provided in the not
 ## Code 
 1. game.py - game definition for Monte Carlo simulation
 2. markov_chain_game.py - Markov chain implementain to get to steady state probabilities.
-3. analysis.upynb - run the Monte Carlo and Markov chain implementations
-4. analysis_distro_fitting.ipynb - Jupyter notebook to fit a distribution to the Monte Carl runs.
+3. analysis.ipynb - Jupyter notebook to fit a distribution to the Monte Carlo runs.
