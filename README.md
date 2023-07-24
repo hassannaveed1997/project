@@ -11,3 +11,9 @@ The is problem 14 from the final projects list for summer 2023. Here is the desc
 
 
 The game is stored in `game.py` and "first-step" analysis is provided in the notebook `analysis.ipynb`.
+
+## Code 
+1. game.py - game definition for Monte Carlo simulation
+2. markov_chain_game.py - Markov chain implementain to get to steady state probabilities.
+3. analysis.upynb - run the Monte Carlo and Markov chain implementations
+4. analysis_distro_fitting.ipynb - Jupyter notebook to fit a distribution to the Monte Carl runs.
